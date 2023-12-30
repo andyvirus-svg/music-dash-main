@@ -1,0 +1,52 @@
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.intro-container h1 {
+  font-size: 4rem;
+  text-align: center;
+  color: #ffffff;
+  width: 80%;
+}
+
+.intro-container span {
+  /* for stroke font */
+  /* -webkit-text-stroke: 2px #fff;
+  color: transparent; */
+}
+
+.intro-btn-container {
+  display: grid;
+  /* when signup will be implemented */
+  /* grid-template-columns: 1fr 1fr;
+  grid-gap: 10px; */
+
+}
+
+.intro-btn {
+  padding: 10px 30px;
+  font-size: 1rem;
+  border-radius: 20px;
+  outline: none;
+  border: 3px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-weight: lighter;
+}
+
+@media (max-width: 768px) {
+  .intro-container h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-container h1 {
+    font-size: 2.5rem;
+  }
+}

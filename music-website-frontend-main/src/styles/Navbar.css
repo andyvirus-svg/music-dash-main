@@ -1,0 +1,141 @@
+.navbar-container {
+  /* for transparent nav */
+  /* background-color: rgba(255,255,255,0.06); */
+  /* backdrop-filter: blur(10px); */
+
+  background-color: #FFFFFF;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  color: #151515;
+  font-family: sans-serif;
+  max-width: 1400px;
+  margin: auto;
+  text-transform: capitalize;
+}
+
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+  width: 150px;
+  height: 25px;
+}
+
+.navbar-logo img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  flex: 0.5;
+  letter-spacing: 0.5px;
+}
+
+.nav-links a, .login-box a {
+  color: #151515;
+}
+
+.nav-links a:hover, .login-box a:hover {
+  color: #ff571f;
+  text-decoration: underline;
+}
+
+.hamburger {
+  display: none;
+}
+
+.mobile-navlinks {
+  display: grid;
+  place-content: center; 
+  position: absolute;
+  color: #fff;
+  font-size: 1.25rem;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  text-align: center;
+  width: 100%;
+  background-color: #000000;
+  transition: all ease-in-out 0.5s;
+  z-index: 100;
+}
+
+.mobile-navlinks li {
+  padding: 10px 0;
+  width: 100%;
+}
+
+.mobile-navlinks.is-active {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .hamburger{
+    display: block;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    z-index: 999;
+  }
+  .hamburger .bar{
+    width: 40px;
+    height: 4px;
+    background-color: #fff;
+    display: block;
+    margin: 6px auto;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+  }
+  
+  .hamburger.is-active{
+    transform: rotate(90deg);
+  }
+  
+  .hamburger.is-active .bar {
+    margin: 4px auto;
+  }
+  
+  .hamburger.is-active .bar:nth-child(1){
+    width: 20px
+  }
+  
+  .hamburger.is-active .bar:nth-child(2){
+    width: 30px
+  }
+  /* Options sliding in from the right */
+  .navbar-options {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially off-screen to the right */
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: right 0.3s ease-in-out;
+  }
+
+  .navbar-options.open {
+    right: 0; /* Slide in from the right when open */
+  }
+
+  /* Style for list items */
+  .navbar-options li {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}

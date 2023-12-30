@@ -1,0 +1,14 @@
+.file-upload-container {
+  border: 1px dashed rgb(230, 139, 255);
+}
+
+.file-upload {
+  height: 150px;
+  cursor: pointer;
+  color: #f1f1f1;
+  background-color: #f7eef7;
+  transition: background-color, 0.3s, ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

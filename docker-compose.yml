@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: ./music-dash-main
+    environment:
+      - MINIO_ENDPOINT=http://minio:9000
+      - MINIO_ACCESS_KEY=dae67832f2caca8c1bd5c0717bd098ea
+      - MINIO_SECRET_KEY=316e8472f8d16d7de8ab814417d1ed51
+    depends_on:
+      - minio
+    ports:
+      - "8000:8000"
+    command: ["npm", "start"]
+
+  minio:
+    image: minio/minio:latest
+    ports:
+      - "9000:9000"
+    environment:
+      - MINIO_ROOT_USER=dae67832f2caca8c1bd5c0717bd098ea
+      - MINIO_ROOT_PASSWORD=316e8472f8d16d7de8ab814417d1ed51
+    volumes:
+      - C:/minio/data:/data
+      - C:/minio/config:/root/.minio

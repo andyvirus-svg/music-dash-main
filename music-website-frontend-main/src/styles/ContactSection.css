@@ -1,0 +1,165 @@
+.contact-section {
+  color: #ff571f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.contact-section h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 900px;
+  background: #ffffff;
+  width: 100%;
+  padding: 50px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.container p {}
+
+.container h1 {
+  text-align: left;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.container form {}
+
+.container form .form-column {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0;
+}
+
+form .form-column .input-data {
+  width: 100%;
+  height: 40px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.contact-section .input-data input,
+.textarea textarea {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 17px;
+  /* border-bottom: 2px solid rgba(255, 255, 255, 0.2); */
+  border-bottom: 2px solid #f07900;
+  outline: none;
+  background-color: #ffffff;
+  color: #ff571f;
+}
+
+.contact-section .input-data input:focus~label,
+.contact-section .textarea textarea:focus~label,
+.contact-section .input-data input:valid~label,
+.contact-section .textarea textarea:valid~label {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #ff571f;
+}
+
+.contact-section .textarea textarea:focus~label,
+.contact-section .textarea textarea:valid~label {
+  transform: translateY(-50px);
+}
+
+.contact-section .textarea textarea {
+  resize: none;
+  padding-top: 10px;
+}
+
+.contact-section .textarea label {
+  width: 100%;
+  bottom: 40px;
+  /* background: #ffffff; */
+  /* color: #fff; */
+}
+
+.contact-section .input-data label {
+  position: absolute;
+  pointer-events: none;
+  bottom: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.contact-section .input-data .underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+}
+
+.contact-section .input-data .underline:before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #ff571f;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.contact-section .input-data input:focus~.underline:before,
+.contact-section .input-data input:valid~.underline:before,
+.contact-section .textarea textarea:focus~.underline:before,
+.contact-section .textarea textarea:valid~.underline:before {
+    transform: scale(1);
+}
+
+.contact-section form .form-column .textarea {
+  height: 70px !important;
+}
+.contactbtn-div {
+}
+
+.contact-btn {
+  display: block;
+  width: 150px;
+  margin: auto;
+  padding: 10px;
+  outline: none;
+  background-color: #000000;
+  color: #ff571f;
+  border: none;
+  border-radius: 20px;
+  letter-spacing: 0.05rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 700px) {
+  .contact-section .container .text {
+    font-size: 30px;
+    margin: 0;
+  }
+
+  .contact-section .container form {
+    padding: 10px 0 0 0;
+  }
+
+  .contact-section .container form .form-column {
+    display: block;
+  }
+
+  .contact-section form .form-column .input-data {
+    margin: 35px 0 !important;
+  }
+}
+
+@media (max-width: 480px) { 
+  .contact-section h1 {
+    font-size: 2.75rem;
+  }
+}
